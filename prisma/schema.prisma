@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  documents Document[]
+  createdAt DateTime  @default(now())
+}
+
+model Document {
+  id           Int           @id @default(autoincrement())
+  userId       Int
+  user         User          @relation(fields: [userId], references: [id])
+  filename     String
+  filepath     String
+  extractedText String
+  llmResponses  LLMResponse[]
+  createdAt    DateTime      @default(now())
+}
+
+
+model LLMResponse {
+  id         Int      @id @default(autoincrement())
+  documentId Int
+  document   Document @relation(fields: [documentId], references: [id])
+  question   String
+  response   String
+  createdAt  DateTime @default(now())
+}
