@@ -79,8 +79,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Mariana Keiske]((https://www.linkedin.com/in/mariana-keiske-903568274/))
+- Author - [Mariana Keiske](https://www.linkedin.com/in/mariana-keiske-903568274/)
 
-- Instagram - [@marikeiske_](https://twitter.com/nestframework](https://www.instagram.com/marikeiske_/)
+- Instagram - [@marikeiske_](https://www.instagram.com/marikeiske_/)
 
 
